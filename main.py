@@ -14,10 +14,10 @@ import hashlib
 # Third-party imports
 import tika
 from tika import parser
-from langchain.text_splitter import CharacterTextSplitter
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.vectorstores import Chroma
-from langchain.schema import Document
+from langchain_text_splitters import CharacterTextSplitter
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.vectorstores import Chroma
+from langchain_core.documents import Document
 
 # Configure logging
 logging.basicConfig(
@@ -70,6 +70,9 @@ class PDFProcessor:
             
         # Initialize embeddings model only when needed (lazy loading)
         self._embeddings_model = None
+        
+        # Ensure vector db directory exists
+        os.makedirs(config["db_directory"], exist_ok=True)
         
     @property
     def embeddings_model(self):
@@ -160,6 +163,7 @@ class PDFProcessor:
             
         logger.info(f"Splitting text into chunks (size={self.config['chunk_size']})")
         try:
+            # Updated method takes texts as list and returns documents
             chunks = self.text_splitter.create_documents([text])
             logger.info(f"Created {len(chunks)} chunks")
             return chunks
@@ -169,9 +173,13 @@ class PDFProcessor:
     
     def get_file_hash(self, file_path: str) -> str:
         """Generate a hash for the file to use as an identifier."""
-        with open(file_path, "rb") as f:
-            file_hash = hashlib.md5(f.read()).hexdigest()
-        return file_hash
+        try:
+            with open(file_path, "rb") as f:
+                file_hash = hashlib.md5(f.read()).hexdigest()
+            return file_hash
+        except Exception as e:
+            logger.error(f"Error generating file hash for {file_path}: {e}")
+            raise
             
     def process_file(self, file_path: str) -> Optional[Chroma]:
         """
@@ -187,11 +195,13 @@ class PDFProcessor:
             # Extract text
             text = self.extract_text(file_path)
             if not text:
+                logger.warning(f"No text extracted from {file_path}")
                 return None
                 
             # Create chunks
             chunks = self.create_chunks(text)
             if not chunks:
+                logger.warning(f"No chunks created from {file_path}")
                 return None
                 
             # Generate a unique persistent id based on file content
@@ -200,6 +210,10 @@ class PDFProcessor:
             
             # Create vector store
             logger.info(f"Generating embeddings and storing in {persist_directory}")
+            
+            # Create directory if it doesn't exist
+            os.makedirs(persist_directory, exist_ok=True)
+            
             vector_store = Chroma.from_documents(
                 documents=chunks,
                 embedding=self.embeddings_model,
