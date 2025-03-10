@@ -1,0 +1,79 @@
+2025-03-07 14:00:33,003 - pdf_processor - INFO - Tika initialized successfully
+2025-03-07 14:00:33,003 - pdf_processor - INFO - Extracting text from ./Dictionnaire-Fulfulde-français-english-et-images.pdf
+2025-03-07 14:00:33,006 - tika.tika - INFO - Retrieving http://search.maven.org/remotecontent?filepath=org/apache/tika/tika-server-standard/2.6.0/tika-server-standard-2.6.0.jar to /tmp/tika-server.jar.
+2025-03-07 14:00:33,294 - tika.tika - INFO - Retrieving http://search.maven.org/remotecontent?filepath=org/apache/tika/tika-server-standard/2.6.0/tika-server-standard-2.6.0.jar.md5 to /tmp/tika-server.jar.md5.
+2025-03-07 14:00:33,465 - tika.tika - WARNING - Failed to see startup log message; retrying...
+2025-03-07 14:00:48,813 - pdf_processor - INFO - Successfully extracted 2353476 characters
+2025-03-07 14:00:48,814 - pdf_processor - INFO - Splitting text into chunks (size=1000)
+2025-03-07 14:00:48,826 - langchain_text_splitters.base - WARNING - Created a chunk of size 1003, which is longer than the specified 1000
+2025-03-07 14:00:48,830 - langchain_text_splitters.base - WARNING - Created a chunk of size 2209, which is longer than the specified 1000
+2025-03-07 14:00:48,831 - langchain_text_splitters.base - WARNING - Created a chunk of size 1110, which is longer than the specified 1000
+2025-03-07 14:00:48,835 - langchain_text_splitters.base - WARNING - Created a chunk of size 1119, which is longer than the specified 1000
+2025-03-07 14:00:48,835 - langchain_text_splitters.base - WARNING - Created a chunk of size 1199, which is longer than the specified 1000
+2025-03-07 14:00:48,835 - langchain_text_splitters.base - WARNING - Created a chunk of size 1017, which is longer than the specified 1000
+2025-03-07 14:00:48,835 - langchain_text_splitters.base - WARNING - Created a chunk of size 1056, which is longer than the specified 1000
+2025-03-07 14:00:48,836 - langchain_text_splitters.base - WARNING - Created a chunk of size 1153, which is longer than the specified 1000
+2025-03-07 14:00:48,837 - langchain_text_splitters.base - WARNING - Created a chunk of size 1044, which is longer than the specified 1000
+2025-03-07 14:00:48,838 - langchain_text_splitters.base - WARNING - Created a chunk of size 1132, which is longer than the specified 1000
+2025-03-07 14:00:48,839 - langchain_text_splitters.base - WARNING - Created a chunk of size 1206, which is longer than the specified 1000
+2025-03-07 14:00:48,839 - langchain_text_splitters.base - WARNING - Created a chunk of size 1072, which is longer than the specified 1000
+2025-03-07 14:00:48,846 - langchain_text_splitters.base - WARNING - Created a chunk of size 1183, which is longer than the specified 1000
+2025-03-07 14:00:48,850 - langchain_text_splitters.base - WARNING - Created a chunk of size 1063, which is longer than the specified 1000
+2025-03-07 14:00:48,850 - langchain_text_splitters.base - WARNING - Created a chunk of size 1023, which is longer than the specified 1000
+2025-03-07 14:00:48,851 - langchain_text_splitters.base - WARNING - Created a chunk of size 1110, which is longer than the specified 1000
+2025-03-07 14:00:48,853 - langchain_text_splitters.base - WARNING - Created a chunk of size 1280, which is longer than the specified 1000
+2025-03-07 14:00:48,853 - langchain_text_splitters.base - WARNING - Created a chunk of size 1045, which is longer than the specified 1000
+2025-03-07 14:00:48,854 - langchain_text_splitters.base - WARNING - Created a chunk of size 1014, which is longer than the specified 1000
+2025-03-07 14:00:48,880 - pdf_processor - INFO - Created 3006 chunks
+2025-03-07 14:00:48,946 - pdf_processor - INFO - Generating embeddings and storing in ./vector_db/21046b28baaa77cc0aa8f49da119b98f
+2025-03-07 14:00:48,946 - pdf_processor - INFO - Initializing embedding model
+2025-03-07 14:00:55,041 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-l6-v2
+2025-03-07 14:00:56,988 - pdf_processor - INFO - Embedding model initialized
+2025-03-07 14:00:57,934 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-03-07 14:05:15,407 - pdf_processor - INFO - Successfully processed ./Dictionnaire-Fulfulde-français-english-et-images.pdf
+2025-03-07 14:05:15,413 - pdf_processor - INFO - PDF processed successfully
+2025-03-07 14:17:42,587 - pdf_processor - INFO - Tika initialized successfully
+2025-03-07 14:17:42,587 - pdf_processor - INFO - Extracting text from ./Dictionnaire-Fulfulde-français-english-et-images.pdf
+2025-03-07 14:17:47,195 - pdf_processor - INFO - Successfully extracted 2353476 characters
+2025-03-07 14:17:47,195 - pdf_processor - INFO - Splitting text into chunks (size=1000)
+2025-03-07 14:17:47,213 - langchain_text_splitters.base - WARNING - Created a chunk of size 1003, which is longer than the specified 1000
+2025-03-07 14:17:47,216 - langchain_text_splitters.base - WARNING - Created a chunk of size 2209, which is longer than the specified 1000
+2025-03-07 14:17:47,216 - langchain_text_splitters.base - WARNING - Created a chunk of size 1110, which is longer than the specified 1000
+2025-03-07 14:17:47,220 - langchain_text_splitters.base - WARNING - Created a chunk of size 1119, which is longer than the specified 1000
+2025-03-07 14:17:47,220 - langchain_text_splitters.base - WARNING - Created a chunk of size 1199, which is longer than the specified 1000
+2025-03-07 14:17:47,220 - langchain_text_splitters.base - WARNING - Created a chunk of size 1017, which is longer than the specified 1000
+2025-03-07 14:17:47,220 - langchain_text_splitters.base - WARNING - Created a chunk of size 1056, which is longer than the specified 1000
+2025-03-07 14:17:47,220 - langchain_text_splitters.base - WARNING - Created a chunk of size 1153, which is longer than the specified 1000
+2025-03-07 14:17:47,221 - langchain_text_splitters.base - WARNING - Created a chunk of size 1044, which is longer than the specified 1000
+2025-03-07 14:17:47,222 - langchain_text_splitters.base - WARNING - Created a chunk of size 1132, which is longer than the specified 1000
+2025-03-07 14:17:47,222 - langchain_text_splitters.base - WARNING - Created a chunk of size 1206, which is longer than the specified 1000
+2025-03-07 14:17:47,223 - langchain_text_splitters.base - WARNING - Created a chunk of size 1072, which is longer than the specified 1000
+2025-03-07 14:17:47,229 - langchain_text_splitters.base - WARNING - Created a chunk of size 1183, which is longer than the specified 1000
+2025-03-07 14:17:47,233 - langchain_text_splitters.base - WARNING - Created a chunk of size 1063, which is longer than the specified 1000
+2025-03-07 14:17:47,233 - langchain_text_splitters.base - WARNING - Created a chunk of size 1023, which is longer than the specified 1000
+2025-03-07 14:17:47,233 - langchain_text_splitters.base - WARNING - Created a chunk of size 1110, which is longer than the specified 1000
+2025-03-07 14:17:47,234 - langchain_text_splitters.base - WARNING - Created a chunk of size 1280, which is longer than the specified 1000
+2025-03-07 14:17:47,234 - langchain_text_splitters.base - WARNING - Created a chunk of size 1045, which is longer than the specified 1000
+2025-03-07 14:17:47,235 - langchain_text_splitters.base - WARNING - Created a chunk of size 1014, which is longer than the specified 1000
+2025-03-07 14:17:47,250 - pdf_processor - INFO - Created 3006 chunks
+2025-03-07 14:17:47,312 - pdf_processor - INFO - Generating embeddings and storing in ./vector_db/21046b28baaa77cc0aa8f49da119b98f
+2025-03-07 14:17:47,313 - pdf_processor - INFO - Initializing embedding model
+2025-03-07 14:17:51,982 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-l6-v2
+2025-03-07 14:17:52,843 - pdf_processor - INFO - Embedding model initialized
+2025-03-07 14:17:53,210 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-03-07 14:22:15,360 - pdf_processor - INFO - Successfully processed ./Dictionnaire-Fulfulde-français-english-et-images.pdf
+2025-03-07 14:22:15,368 - pdf_processor - INFO - PDF processed successfully
+2025-03-07 14:24:26,986 - pdf_processor - INFO - Tika initialized successfully
+2025-03-07 14:24:38,720 - pdf_processor - INFO - Initializing embedding model
+2025-03-07 14:24:43,928 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-l6-v2
+2025-03-07 14:24:46,440 - pdf_processor - INFO - Embedding model initialized
+2025-03-07 14:24:46,868 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-03-07 14:24:47,220 - pdf_processor - INFO - Query 'How to say good morning' returned 3 results
+2025-03-07 14:26:06,676 - pdf_processor - INFO - Query 'water' returned 3 results
+2025-03-07 14:28:27,324 - pdf_processor - INFO - Query 'Frnpersonnage' returned 3 results
+2025-03-07 14:29:48,259 - pdf_processor - INFO - Query 'mouchoir' returned 3 results
+2025-03-07 14:31:03,199 - pdf_processor - INFO - Query 'couture' returned 3 results
+2025-03-07 14:33:46,633 - pdf_processor - INFO - Query 'n faire un petit tas de qqch' returned 3 results
+2025-03-07 14:36:03,684 - pdf_processor - INFO - Query 'Bonjour' returned 3 results
+2025-03-07 14:38:14,624 - pdf_processor - INFO - Query 'union Africaine' returned 3 results
+2025-03-07 14:50:03,329 - pdf_processor - INFO - Query 'one' returned 3 results
